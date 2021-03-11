@@ -31,5 +31,13 @@ public class Hoofdletters {
         curstomerNames.add("henk den hartog");
         curstomerNames.add("mo el-mecky");
         curstomerNames.add("fredje kadetje");
+
+        capitilize(curstomerNames);
+    }
+
+    public static void capitilize(List<String> customerNames) {
+        for(int i = 0; i < customerNames.size(); i++) {
+            System.out.println(customerNames.get(i).toUpperCase());
+        }
     }
 }
