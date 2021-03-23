@@ -45,8 +45,8 @@ public class HoogsteGetalAbstract {
                 if (numbers.get(j - 1) > numbers.get(j)) {
                     // Swap element
                     temp = numbers.get(j-1);                    //
-                    numbers.get(j - 1) = numbers.get(j);       // HIER ZIT ERGENS EEN ERROR
-                    numbers.get(j) = temp;                     //
+                    //numbers.get(j - 1) = numbers.get(j);       // HIER ZIT ERGENS EEN ERROR
+                    //numbers.get(j) = temp;                     //
                 }
             }
         }
