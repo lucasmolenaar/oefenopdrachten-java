@@ -37,13 +37,20 @@ public class Hoofdletters {
 
     public static void capitilize(List<String> customerNames) {
         for (String person : customerNames) {
-            String firstNameFirstLetter = person.substring(0,1);
-            String firstNameRest = person.substring(1, person.indexOf(" "));
-            String lastNameFirstLetter = person.substring(person.indexOf(" ") + 1, person.indexOf(" ") + 2);
-            String lastNameRest = person.substring(person.indexOf(" ") + 2);
+            String[] parts = person.split(" ");
 
-            System.out.println(firstNameFirstLetter.toUpperCase() + firstNameRest +
-                    " " + lastNameFirstLetter.toUpperCase() + lastNameRest);
+//            if (parts.length > 2) {
+//                String firstLetterFirstName = parts[0].substring(0,1);
+//                String firstLetterLastName = parts[parts.length - 1].substring(0,1);
+//            }
+
+            for (String part : parts) {
+                String firstLetter = part.substring(0,1);
+                String restOfWord = part.substring(1);
+                System.out.print(firstLetter.toUpperCase() + restOfWord + " " );
+            }
+
+            System.out.println(); // 1 regel naar beneden in de console
         }
     }
 }
