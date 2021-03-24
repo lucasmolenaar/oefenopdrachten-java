@@ -3,6 +3,7 @@ package nl.novi.opdrachten.methodes;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -23,10 +24,24 @@ import java.util.List;
 public class SorteerLijst {
 
     public static void main(String[] argeblabla) {
-
         List<Integer> wrongList = new ArrayList<>(Arrays.asList(1, 2, 4, 5, 6, 7, 8));
+        List<Integer> anotherWrongList = new ArrayList<>(Arrays.asList(40, 2));
         List<Integer> correctList = new ArrayList<>(Arrays.asList(88, 888, 909909));
 
+        sortList(wrongList);
+        sortList(anotherWrongList);
+        sortList(correctList);
+    }
+
+    public static void sortList(List<Integer> list) {
+        if (list.size() < 3) {
+            System.out.println("Er zijn te weinig getallen");
+        } else if (list.size() > 3) {
+            System.out.println("Er zijn te veel getallen");
+        } else {
+            Collections.sort(list);
+            System.out.println(list);
+        }
     }
 
 }
